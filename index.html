@@ -4,18 +4,28 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
 </head>
+
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+
 <div id='map' style='width: 800px; height: 500px;'></div>
+
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoicjRjZSIsImEiOiJjazMwdG03dTkwMjRvM2RvZG94dTg0MjJxIn0.DUrTzNkXLvGmzW410ZRidg';
 var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/r4ce/ck52okdjh1aaa1cqjw09mqlyx',
-center: [-122.4312970, 37.7739720],
-zoom: 8
+  container: 'map',
+  style: 'mapbox://styles/r4ce/ck52okdjh1aaa1cqjw09mqlyx',
+  center: [-122.4312970, 37.7739720],
+    zoom: 8
 });
+
+var marker = new mapboxgl.Marker()
+  .setLngLat([-118.29239, 36.57855]) // [lng, lat] coordinates to place the marker at
+  .addTo(map); // add the marker to the map
+
+
 </script>
+
 </body>
 </html>
