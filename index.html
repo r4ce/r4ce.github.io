@@ -14,13 +14,15 @@
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoicjRjZSIsImEiOiJjazMwdG03dTkwMjRvM2RvZG94dTg0MjJxIn0.DUrTzNkXLvGmzW410ZRidg';
 var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/r4ce/ck52okdjh1aaa1cqjw09mqlyx',
-  center: [-118.29239, 36.57855],
-    zoom: 10
+  container: 'map', //container id
+  style: 'mapbox://styles/r4ce/ck52okdjh1aaa1cqjw09mqlyx', //stylesheet location
+  center: [-118.29239, 36.57855], //starting position [lng,lat]
+    zoom: 10 //starting zoom level
 });
 
+
 var marker = new mapboxgl.Marker()
+  'color': '#314ccd'
   .setLngLat([-118.29239, 36.57855]) // [lng, lat] coordinates to place the marker at
   .addTo(map); // add the marker to the map
 
